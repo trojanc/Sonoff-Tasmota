@@ -353,6 +353,7 @@ enum SupportedModules {
   WAGA,
   SYF05,
   SONOFF_L1,
+  TROJANC_GARAGE,
   MAXMODULE};
 
 #define USER_MODULE        255
@@ -719,7 +720,8 @@ const uint8_t kModuleNiceList[] PROGMEM = {
   SYF05,
   YTF_IR_BRIDGE,
   WITTY,               // Development Devices
-  WEMOS
+  WEMOS,
+  TROJANC_GARAGE
 };
 
 // Default module settings
@@ -2002,6 +2004,26 @@ const mytmplt kModules[MAXMODULE] PROGMEM = {
      GPIO_USER,
      GPIO_USER,
      0
+  },
+  { "Garage",         // Any Ardumation device using Adafruit Feather
+	GPIO_USER,        // GPIO00 D3 Wemos Button Shield
+	GPIO_USER,        // GPIO01 TX Serial RXD
+	GPIO_LED1_INV,    // GPIO02 D4 Onboard LED
+	GPIO_USER,        // GPIO03 RX Serial TXD and Optional sensor
+	GPIO_USER,        // GPIO04 D2 Wemos I2C SDA
+	GPIO_REL2,        // GPIO05 D1 LED for door
+					  // GPIO06 (SD_CLK   Flash)
+					  // GPIO07 (SD_DATA0 Flash QIO/DIO/DOUT)
+					  // GPIO08 (SD_DATA1 Flash QIO/DIO/DOUT)
+	GPIO_USER,        // GPIO09 (SD_DATA2 Flash QIO or ESP8285)
+	GPIO_USER,        // GPIO10 (SD_DATA3 Flash QIO or ESP8285)
+					  // GPIO11 (SD_CMD   Flash)
+	GPIO_KEY1,        // GPIO12 D6 Fake button 1
+	GPIO_REL1,        // GPIO13 D7 LED Motion
+	GPIO_SWT2_NP,     // GPIO14 D5 Door
+	GPIO_USER,        // GPIO15 D8
+	GPIO_SWT3_NP,     // GPIO16 D0 Motion Sensor
+	GPIO_FLAG_ADC0    // ADC0 A0 Analog input
   }
 };
 
