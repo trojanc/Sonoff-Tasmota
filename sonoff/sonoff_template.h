@@ -2010,7 +2010,7 @@ const mytmplt kModules[MAXMODULE] PROGMEM = {
 	GPIO_USER,        // GPIO01 TX Serial RXD
 	GPIO_LED1_INV,    // GPIO02 D4 Onboard LED
 	GPIO_USER,        // GPIO03 RX Serial TXD and Optional sensor
-	GPIO_USER,        // GPIO04 D2 Wemos I2C SDA
+	GPIO_DSB,         // GPIO04 D2 Temperature
 	GPIO_REL2,        // GPIO05 D1 LED for door
 					  // GPIO06 (SD_CLK   Flash)
 					  // GPIO07 (SD_DATA0 Flash QIO/DIO/DOUT)
