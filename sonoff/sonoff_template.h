@@ -2023,7 +2023,7 @@ const mytmplt kModules[MAXMODULE] PROGMEM = {
 	GPIO_SWT2_NP,     // GPIO14 D5 Door
 	GPIO_USER,        // GPIO15 D8
 	GPIO_SWT3_NP,     // GPIO16 D0 Motion Sensor
-	GPIO_FLAG_ADC0    // ADC0 A0 Analog input
+	ADC0_USER    // ADC0 A0 Analog input
   }
 };
 
